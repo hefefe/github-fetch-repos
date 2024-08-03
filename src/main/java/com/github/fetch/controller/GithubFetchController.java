@@ -1,6 +1,6 @@
 package com.github.fetch.controller;
 
-import com.github.fetch.exception.model.GithubErrorResponse;
+import com.github.fetch.exception.model.ErrorDto;
 import com.github.fetch.model.UserAndRepositoriesDto;
 import com.github.fetch.service.GithubService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -30,7 +30,7 @@ public class GithubFetchController {
                             schema = @Schema(implementation = UserAndRepositoriesDto.class))}),
             @ApiResponse(responseCode = "404", description = "User not found",
                     content = {@Content(mediaType = "application/json",
-                            schema = @Schema(implementation = GithubErrorResponse.class))})
+                            schema = @Schema(implementation = ErrorDto.class))})
     })
     @GetMapping("/{userName}")
     public ResponseEntity<UserAndRepositoriesDto> getUserAndRepositoriesData(@PathVariable String userName,

@@ -30,6 +30,7 @@
 		<java.version>21</java.version>
 		<springdoc.openapi.starter.webmvc.ui>2.5.0</springdoc.openapi.starter.webmvc.ui>
 		<spring.aop>6.1.11</spring.aop>
+		<apache.commons.lang>3.15.0</apache.commons.lang>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -73,7 +74,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.15.0</version>
+			<version>${apache.commons.lang}</version>
 		</dependency>
 	</dependencies>
 
